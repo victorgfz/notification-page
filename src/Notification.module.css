@@ -1,0 +1,85 @@
+
+
+.item {
+     display: grid;
+     grid-template-columns: auto 1fr;
+     gap: 0 .5rem;
+     padding: 1.5rem;
+     border-radius: .25rem;
+ 
+}
+
+.photo {
+     width: 3rem;
+     height: 3rem;
+     border-radius: 50%;
+     cursor: pointer;
+     grid-row: 1 / 3;
+     overflow: hidden;
+}
+
+
+.name {
+     font-size: 1rem;
+     font-weight: 800;
+     color: hsl(224, 21%, 14%);
+     cursor: pointer;
+     transition: .2s;
+     
+}
+
+.name:hover,
+.action:hover {
+     color: hsl(219, 85%, 26%);
+}
+
+.description {
+     font-size: 1rem;
+     color: hsl(219, 14%, 63%);
+     font-weight: 400;
+     
+     margin-left: .2rem;
+}
+
+.action {
+     font-size: 1rem;
+     color: hsl(219, 14%, 63%);
+     font-weight: 700;
+     cursor: pointer;
+     transition: .2s;
+     margin-left: .2rem;
+}
+
+.time {
+
+     font-size: 1rem;
+     color: hsl(219, 14%, 63%);
+     font-weight: 400;
+     
+}
+
+.isItRead {
+     position: relative;
+     
+}
+
+.isItRead::after {
+     content: '';
+     width: .5rem;
+     height: .5rem;
+     background-color: hsl(1, 90%, 64%);
+     position: absolute;
+     margin-left: .5rem;
+     margin-top: .5rem;
+     border-radius: 50%;
+}
+
+.content {
+     background-color: hsl(211, 68%, 94%);
+     color: hsl(219, 12%, 42%);
+     border-radius: .25rem;
+     padding: 1rem;
+     max-width: 40rem;
+     grid-column: 2;
+     font-family: var(--1st-type);
+}

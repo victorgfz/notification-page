@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+html {
+    --1st-type: Plus Jakarta Sans, arial, sans-serif;
+    font-family: var(--1st-type);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(211, 68%, 94%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    margin: 1rem;
+    box-shadow: 0 3px 6px hsla(224, 21%, 14%, 20%);
+    max-width: 60rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--1st-type);
+    font-size: 1.5rem;
+    color: hsl(224, 21%, 14%);
+}
+
+.unread {
+    padding: .2rem .8rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: .2rem;
+    background-color: hsl(219, 85%, 26%);
+    margin-left: .5rem;
+}
+
+.allRead {
+    font-family: var(--1st-type);
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(219, 14%, 63%);
+    transition: .2s;
+    cursor: pointer; 
+}
+
+.allRead:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.photoCreed {
+    background: url('../assets/creed-bratton.webp') no-repeat center center;
+    background-size: cover;
+}
+.photoPam {
+    background: url('../assets/pam-beesly.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.photoMichael {
+    background: url('../assets/michael-scott.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.photoDwight {
+    background: url('../assets/dwight-schrute.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.photoKevin {
+    background: url('../assets/kevin-malone.webp') no-repeat center center;
+    background-size: cover;
+}
+.photoStanley {
+    background: url('../assets/stanley-hudson.webp') no-repeat center center;
+    background-size: cover;
+}
+.photoJair {
+    background: url('../assets/jair-bolsonaro.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.fromUp {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fromUpA .4s forwards;
+}
+
+@keyframes fromUpA {
+    to {
+         opacity: 1;
+         transform: translateY(0px);
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        min-width: none;
+    }
 }
